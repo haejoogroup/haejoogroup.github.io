@@ -1,0 +1,112 @@
+/* ==========================================================================
+    GUIDE
+  ===========================================================================
+    WebP: Does not work on Safari 15. Only Big Sur+ will work. 
+    Must include <type="image/webp"> to make fallback working
+    <type="image/jpeg"> is correct one, <type="image/jpg"> does not work on Safari.
+
+    Responsive image treatment: 
+
+    !Only use WebP for large desktop screen. 
+
+    1. max-width: Mobile - Always @2x and JPG. Old iOS does not load WebP. 
+    2. min-width: Large desktop - Use WebP for large image
+    3. <img>:     Fallback - Use high quality or @2x image. Only old browsers (and Safari) will load this. 
+  ========================================================================== */
+/* ==========================================================================
+    BOOTSTRAP GRID SYSTEM OVERRIDE
+  ===========================================================================
+  Default: Breakpoint  |  Content width
+    sm:         576px  |  540px
+    md:         768px  |  720px
+    lg:         992px  |  960px
+    xl:        1200px  |  1140px
+    xxl:       1400px  |  1320px
+
+  Add-on:
+    3xl:       1800px  |  1400px
+    4xl:       2500px  |  1600px
+  ========================================================================== */
+/* BREAKPOINT - !! this variabes does not replace BS default !! */
+/* CONTENT WIDTH */
+/* CUSTOM GUTTER */
+.container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl, .row, .row > * {
+  --bs-gutter-x: 1rem;
+  /* MOBILE */
+  /* LARGE SCREEN */
+}
+
+@media only screen and (min-width: 992px) {
+  .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl, .row, .row > * {
+    --bs-gutter-x: 2rem;
+  }
+}
+
+@media only screen and (min-width: 2400px) {
+  .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl, .row, .row > * {
+    --bs-gutter-x: 2rem;
+  }
+}
+
+/* CONTAINER SIDE PADDING */
+.container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+  padding-right: calc(var(--bs-gutter-x) * 1);
+  padding-left: calc(var(--bs-gutter-x) * 1);
+}
+
+/* CUSTOM CONTAINER WIDTH
+   ========================================================================== */
+@media only screen and (min-width: 768px) {
+  .container, .container-fluid, .container-sm, .container-md {
+    max-width: calc(720px + (var(--bs-gutter-x) * 2));
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .container, .container-fluid, .container-sm, .container-md, .container-lg {
+    max-width: calc(960px + (var(--bs-gutter-x) * 2));
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: calc(1140px + (var(--bs-gutter-x) * 2));
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    max-width: calc(1320px + (var(--bs-gutter-x) * 2));
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    max-width: calc(1400px + (var(--bs-gutter-x) * 2));
+  }
+}
+
+@media only screen and (min-width: 2400px) {
+  .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    max-width: calc(1600px + (var(--bs-gutter-x) * 2));
+  }
+}
+
+/* ==========================================================================
+    SCAFFOLDING
+   ========================================================================== */
+html, body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.clearfix::after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+.page-content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
