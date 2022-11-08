@@ -1,17 +1,17 @@
 /* ==========================================================================
     GUIDE
   ===========================================================================
-    WebP: Does not work on Safari 15. Only Big Sur+ will work. 
+    WebP: Does not work on Safari 15. Only Big Sur+ will work.
     Must include <type="image/webp"> to make fallback working
     <type="image/jpeg"> is correct one, <type="image/jpg"> does not work on Safari.
 
-    Responsive image treatment: 
+    Responsive image treatment:
 
-    !Only use WebP for large desktop screen. 
+    !Only use WebP for large desktop screen.
 
-    1. max-width: Mobile - Always @2x and JPG. Old iOS does not load WebP. 
+    1. max-width: Mobile - Always @2x and JPG. Old iOS does not load WebP.
     2. min-width: Large desktop - Use WebP for large image
-    3. <img>:     Fallback - Use high quality or @2x image. Only old browsers (and Safari) will load this. 
+    3. <img>:     Fallback - Use high quality or @2x image. Only old browsers (and Safari) will load this.
   ========================================================================== */
 /* ==========================================================================
     BOOTSTRAP GRID SYSTEM OVERRIDE
@@ -38,7 +38,7 @@
 
 @media only screen and (min-width: 992px) {
   .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl, .row, .row > * {
-    --bs-gutter-x: 2rem;
+    --bs-gutter-x: 1.5rem;
   }
 }
 
@@ -55,7 +55,7 @@
 }
 
 /* CUSTOM CONTAINER WIDTH
-   ========================================================================== */
+  ========================================================================== */
 @media only screen and (min-width: 768px) {
   .container, .container-fluid, .container-sm, .container-md {
     max-width: calc(720px + (var(--bs-gutter-x) * 2));
@@ -76,25 +76,25 @@
 
 @media only screen and (min-width: 1400px) {
   .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-    max-width: calc(1320px + (var(--bs-gutter-x) * 2));
+    max-width: calc(1140px + (var(--bs-gutter-x) * 2));
   }
 }
 
 @media only screen and (min-width: 1800px) {
   .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-    max-width: calc(1400px + (var(--bs-gutter-x) * 2));
+    max-width: calc(1140px + (var(--bs-gutter-x) * 2));
   }
 }
 
 @media only screen and (min-width: 2400px) {
   .container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-    max-width: calc(1600px + (var(--bs-gutter-x) * 2));
+    max-width: calc(1140px + (var(--bs-gutter-x) * 2));
   }
 }
 
 /* ==========================================================================
     SCAFFOLDING
-   ========================================================================== */
+  ========================================================================== */
 html, body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -106,7 +106,103 @@ html, body {
   display: table;
 }
 
-.page-content {
-  padding-top: 40px;
-  padding-bottom: 40px;
+/* ==========================================================================
+    NAVIGATION
+   ========================================================================== */
+/* Active Link */
+[data-template="home"] .navbar .nav-item__home a,
+.navbar [data-active-item="active"] a {
+  color: var(--bs-navbar-active-color);
+}
+
+/* MOBILE BUTTON
+  ========================================================================== */
+.navbar-toggler,
+.btn-close {
+  border: 0;
+  border-radius: 0;
+  opacity: 1;
+  outline: 0;
+  padding: 5px;
+  transition: opacity 200ms ease;
+}
+
+.navbar-toggler-icon,
+.btn-close {
+  background: none;
+}
+
+.navbar-toggler-icon,
+.btn-close {
+  width: 22px;
+  height: 22px;
+}
+
+.navbar-toggler-icon svg,
+.btn-close-icon svg {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.btn-close-icon {
+  background: none;
+  display: block;
+  padding: 3px;
+}
+
+.navbar-toggler:hover,
+.btn-close:hover {
+  opacity: 1;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  opacity: 1;
+}
+
+.navbar-toggler:focus-visible,
+.btn-close:focus-visible {
+  box-shadow: 0 0 0 3px #0d6efd;
+  opacity: 1;
+}
+
+/* Close button */
+.btn-close::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 18px;
+  height: 18px;
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTU3LjEgMCAwIDU3LjEgMi45IDYwIDYwIDIuOSA1Ny4xIDB6TTAgMi45IDU3LjEgNjBsMi45LTIuOUwyLjkgMCAwIDIuOXoiIC8+PC9zdmc+") no-repeat center center;
+}
+
+/* White Close button */
+.btn-close-white {
+  filter: none;
+}
+
+.btn-close-white::after {
+  background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTU3LjEgMCAwIDU3LjEgMi45IDYwIDYwIDIuOSA1Ny4xIDB6TTAgMi45IDU3LjEgNjBsMi45LTIuOUwyLjkgMCAwIDIuOXoiIGZpbGw9IiNGRkYiIC8+PC9zdmc+") no-repeat center center;
+}
+
+/* ==========================================================================
+    MEDIA
+   ========================================================================== */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  margin-bottom: 60px;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
