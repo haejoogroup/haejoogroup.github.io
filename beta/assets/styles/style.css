@@ -218,6 +218,18 @@ b, strong {
 /* ==========================================================================
     FOOTER
    ========================================================================== */
+.footer-divider {
+  display: none;
+  margin: 1rem 0 0.5rem;
+  opacity: 0.1;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer-divider {
+    display: block;
+  }
+}
+
 .globalFooter__nav,
 .socialLink {
   margin-left: -0.5rem;
