@@ -271,6 +271,32 @@ b, strong {
 /* ==========================================================================
     PAGE HEADER
    ========================================================================== */
+.page-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.page-banner-text {
+  position: relative;
+  z-index: 1;
+}
+
+.page-banner-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.page-banner-background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .page-banner-inner {
   display: flex;
   justify-content: center;
