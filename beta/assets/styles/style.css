@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ==========================================================================
     GUIDE
   ===========================================================================
@@ -107,6 +108,13 @@ html, body {
 }
 
 /* ==========================================================================
+    TYPOGRAPHY
+   ========================================================================== */
+b, strong {
+  font-weight: 700;
+}
+
+/* ==========================================================================
     NAVIGATION
    ========================================================================== */
 /* Active Link */
@@ -205,4 +213,201 @@ html, body {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* ==========================================================================
+    FOOTER
+   ========================================================================== */
+.globalFooter__nav,
+.socialLink {
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+.socialLink__link {
+  width: 40px;
+  height: 40px;
+}
+
+.socialLink img {
+  width: 100%;
+  height: auto;
+}
+
+.globalFooter__note address {
+  font-size: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.globalFooter__note address h4 {
+  font-size: 1.25rem;
+}
+
+.globalFooter__backTop a {
+  color: #000;
+  text-decoration: none;
+}
+
+.globalFooter__backTop svg {
+  width: 24px;
+  height: 24px;
+  vertical-align: top;
+  top: 4px;
+  position: relative;
+}
+
+@media only screen and (max-width: 991px) {
+  .globalFooter__backTop {
+    margin-top: -66px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .globalFooter__backTop {
+    margin-top: 0px;
+  }
+}
+
+/* ==========================================================================
+    PAGE HEADER
+   ========================================================================== */
+.page-banner-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-banner-inner {
+    height: 400px;
+  }
+  .page-banner-inner .page-banner-text {
+    max-width: 700px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .page-banner-inner {
+    height: 600px;
+  }
+  .page-banner-inner .page-banner-text {
+    max-width: 800px;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2.38rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.38rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.lead {
+  font-weight: 300;
+}
+
+.hr-divider {
+  margin: 3rem 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/* ==========================================================================
+    BUTTON
+   ========================================================================== */
+.btn-primary {
+  background: #2070b4;
+  border-color: #2070b4;
+}
+
+.btn-primary:hover {
+  background: #439deb;
+  border-color: #439deb;
+}
+
+/* ==========================================================================
+    BLOCKQUOTE
+   ========================================================================== */
+.blockquote {
+  color: #2070b4;
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  padding: 0 10%;
+}
+
+figure {
+  position: relative;
+}
+
+figcaption {
+  position: absolute;
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  font-size: .6875rem;
+  font-style: italic;
+  bottom: 0;
+  padding: 4px 12px;
+  width: 100%;
+}
+
+.applications dt {
+  display: inline-block;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.applications dd {
+  position: relative;
+  padding-left: 24px;
+}
+
+.applications dd::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+}
+
+@media only screen and (min-width: 992px) {
+  .applications dt {
+    height: 70px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .applications dt {
+    height: 100px;
+  }
 }
