@@ -453,6 +453,41 @@ figcaption {
 /* ==========================================================================
     MOBILE NAV
    ========================================================================== */
-.offcanvas-header .navbar-brand {
-  visibility: hidden;
+@media only screen and (max-width: 1199px) {
+  [data-template="home"] .navbar .nav-item__home a,
+[data-template="home"] .navbar [data-active-item="active"] a {
+    color: #FFF;
+  }
+  .site-header .offcanvas {
+    background: #2070b4;
+    box-shadow: none;
+    border: 0;
+    color: #FFF;
+  }
+  .site-header .offcanvas a {
+    color: #FFF;
+    font-size: 20px;
+  }
+  .site-header .offcanvas-body {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .site-header .offcanvas-header .navbar-brand {
+    visibility: hidden;
+  }
+  /* Close button */
+  .site-header .btn-close {
+    margin: 15px -3px 0 0px;
+  }
+  .site-header .btn-close::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 18px;
+    height: 18px;
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTU3LjEgMCAwIDU3LjEgMi45IDYwIDYwIDIuOSA1Ny4xIDB6TTAgMi45IDU3LjEgNjBsMi45LTIuOUwyLjkgMCAwIDIuOXoiIGZpbGw9IiNGRkYiIC8+PC9zdmc+") no-repeat center center;
+  }
 }
