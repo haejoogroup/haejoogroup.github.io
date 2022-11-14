@@ -419,37 +419,6 @@ figcaption {
   width: 100%;
 }
 
-.applications dt {
-  display: inline-block;
-  font-size: 1.5rem;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.applications dd {
-  position: relative;
-  padding-left: 24px;
-}
-
-.applications dd::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-}
-
-@media only screen and (min-width: 992px) {
-  .applications dt {
-    height: 70px;
-  }
-}
-
-@media only screen and (min-width: 1400px) {
-  .applications dt {
-    height: 100px;
-  }
-}
-
 /* ==========================================================================
     MOBILE NAV
    ========================================================================== */
@@ -489,5 +458,205 @@ figcaption {
     width: 18px;
     height: 18px;
     background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBhdGggZD0iTTU3LjEgMCAwIDU3LjEgMi45IDYwIDYwIDIuOSA1Ny4xIDB6TTAgMi45IDU3LjEgNjBsMi45LTIuOUwyLjkgMCAwIDIuOXoiIGZpbGw9IiNGRkYiIC8+PC9zdmc+") no-repeat center center;
+  }
+  .site-header .offcanvas-backdrop.show {
+    opacity: 0.5;
+  }
+}
+
+/* ==========================================================================
+    Capabilities
+   ========================================================================== */
+.five-stages-list {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+
+.five-stages-list li {
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  display: inline-block;
+  border: 4px solid #a2cdee;
+  border-radius: 0;
+  background: #3f99cd;
+  background: linear-gradient(to bottom, #3f99cd 0, #1864b0 100%);
+  font-size: 14px;
+}
+
+.five-stages-list li p {
+  position: relative;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: normal;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  letter-spacing: -0.5px;
+}
+
+.five-stages-list li:last-child::after {
+  display: none;
+}
+
+@media only screen and (max-width: 575px) {
+  .five-stages-list li {
+    min-width: 240px;
+    max-width: 120px;
+    width: 240px;
+    height: 120px;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 16px;
+  }
+  .five-stages-list li::after {
+    content: "↓";
+    position: absolute;
+    right: 50%;
+    margin-right: -12px;
+    bottom: -32px;
+    font-weight: 600;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .five-stages-list {
+    flex-direction: row;
+  }
+  .five-stages-list li {
+    min-width: 100px;
+    max-width: 100px;
+    width: 100px;
+    height: 100px;
+    margin: 7px;
+    padding: 0.5rem;
+    font-size: 12px;
+    border-width: 4px;
+  }
+  .five-stages-list li::after {
+    content: "→";
+    position: absolute;
+    right: -18px;
+    top: 34px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .five-stages-list li {
+    min-width: 120px;
+    max-width: 120px;
+    width: 120px;
+    height: 120px;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 12px;
+    border-width: 4px;
+    border-radius: 50%;
+  }
+  .five-stages-list li::after {
+    right: -30px;
+    top: 35px;
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .five-stages-list li {
+    min-width: 140px;
+    max-width: 140px;
+    width: 140px;
+    height: 140px;
+    font-size: 14px;
+    border-width: 4px;
+  }
+  .five-stages-list li::after {
+    top: 48px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .five-stages-list li {
+    min-width: 160px;
+    max-width: 160px;
+    width: 160px;
+    height: 160px;
+    font-size: 16px;
+    border-width: 8px;
+  }
+  .five-stages-list li::after {
+    top: 50px;
+    right: -36px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .five-stages-list li {
+    min-width: 190px;
+    max-width: 190px;
+    width: 190px;
+    height: 190px;
+    font-size: 18px;
+  }
+  .five-stages-list li::after {
+    right: -40px;
+    top: 62px;
+    font-size: 32px;
+  }
+}
+
+.applications .card {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 1rem 1rem;
+  border-radius: 24px;
+  border-width: 0;
+  background: #3faccf;
+  color: #FFF;
+  text-shadow: 0 0 1px #369, 0 1px 1px #187593;
+  font-weight: 600;
+}
+
+.applications dt {
+  display: inline-block;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.applications dd {
+  position: relative;
+  padding-left: 24px;
+}
+
+.applications dd::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #fc0;
+  font-weight: 800;
+}
+
+@media only screen and (min-width: 992px) {
+  .applications dt {
+    height: 70px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .applications dt {
+    height: 90px;
   }
 }
