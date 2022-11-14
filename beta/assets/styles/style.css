@@ -268,7 +268,7 @@ b, strong {
   width: 24px;
   height: 24px;
   vertical-align: top;
-  top: 4px;
+  top: 0;
   position: relative;
 }
 
@@ -281,6 +281,12 @@ b, strong {
 @media only screen and (max-width: 767px) {
   .globalFooter__backTop {
     margin-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .globalFooter__backTop svg {
+    top: 4px;
   }
 }
 
@@ -531,13 +537,17 @@ figcaption {
     font-size: 16px;
   }
   .five-stages-list li::after {
-    content: "↓";
+    content: "";
     position: absolute;
     right: 50%;
-    margin-right: -12px;
+    margin-right: -1px;
     bottom: -32px;
     font-weight: 600;
     font-size: 18px;
+    width: 2px;
+    height: 32px;
+    background: #a2cdee;
+    bottom: -36px;
   }
 }
 
@@ -556,12 +566,16 @@ figcaption {
     border-width: 4px;
   }
   .five-stages-list li::after {
-    content: "→";
+    content: "";
     position: absolute;
     right: -18px;
     top: 34px;
     font-weight: 600;
     font-size: 16px;
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktYXJyb3ctcmlnaHQtc2hvcnQiIHZpZXdCb3g9IjAgMCAxNiAxNiI+CiAgPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNCA4YS41LjUgMCAwIDEgLjUtLjVoNS43OTNMOC4xNDYgNS4zNTRhLjUuNSAwIDEgMSAuNzA4LS43MDhsMyAzYS41LjUgMCAwIDEgMCAuNzA4bC0zIDNhLjUuNSAwIDAgMS0uNzA4LS43MDhMMTAuMjkzIDguNUg0LjVBLjUuNSAwIDAgMSA0IDh6Ii8+Cjwvc3ZnPg==") no-repeat center center;
+    width: 16px;
+    height: 24px;
+    background-size: cover;
   }
 }
 
@@ -578,9 +592,11 @@ figcaption {
     border-radius: 50%;
   }
   .five-stages-list li::after {
-    right: -30px;
-    top: 35px;
+    right: -35px;
+    top: 40px;
     font-size: 24px;
+    width: 30px;
+    height: 30px;
   }
 }
 
@@ -594,7 +610,8 @@ figcaption {
     border-width: 4px;
   }
   .five-stages-list li::after {
-    top: 48px;
+    top: 52px;
+    right: -36px;
   }
 }
 
@@ -608,8 +625,10 @@ figcaption {
     border-width: 8px;
   }
   .five-stages-list li::after {
-    top: 50px;
-    right: -36px;
+    top: 52px;
+    right: -44px;
+    width: 38px;
+    height: 38px;
   }
 }
 
@@ -622,9 +641,8 @@ figcaption {
     font-size: 18px;
   }
   .five-stages-list li::after {
-    right: -40px;
-    top: 62px;
-    font-size: 32px;
+    right: -44px;
+    top: 68px;
   }
 }
 
