@@ -110,6 +110,10 @@ html, body {
 /* ==========================================================================
     TYPOGRAPHY
    ========================================================================== */
+html, body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 b, strong {
   font-weight: 700;
 }
@@ -280,6 +284,10 @@ b, strong {
   }
 }
 
+.site-copyright {
+  font-size: 16px;
+}
+
 /* ==========================================================================
     PAGE HEADER
    ========================================================================== */
@@ -336,21 +344,25 @@ b, strong {
 h1 {
   font-size: 3rem;
   font-weight: 700;
+  letter-spacing: -1px;
 }
 
 h2 {
   font-size: 2.38rem;
   font-weight: 700;
+  letter-spacing: -1px;
 }
 
 h3 {
   font-size: 2.38rem;
   font-weight: 700;
+  letter-spacing: -1px;
 }
 
 h4 {
   font-size: 1.5rem;
   font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .lead {
