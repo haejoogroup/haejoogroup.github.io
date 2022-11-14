@@ -736,6 +736,9 @@ figcaption {
   .home-carousel {
     height: 400px;
   }
+  .home-carousel .lead {
+    max-width: 720px;
+  }
   .carousel-caption,
 .page-banner-inner {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
