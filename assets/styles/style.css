@@ -784,6 +784,32 @@ figcaption {
 /* ==========================================================================
     HOME SECTIONS
 ========================================================================== */
+.home-about .section-subtitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.home-about .blockquote {
+  color: #2070b4;
+  font-size: 1.33rem;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: left;
+  width: 100%;
+  padding: 0;
+}
+
+.home-about hr {
+  width: 90px;
+  height: 4px;
+  background: #39c;
+  border: none;
+  display: none;
+  opacity: 1;
+  margin: 20px 0;
+}
+
 /*  HOME SERVICES
 ========================================================================== */
 .home-services .container {
@@ -799,12 +825,16 @@ figcaption {
   max-width: 100%;
   margin: 60px auto;
   position: relative;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .home-artificial-reef__textbox {
   position: relative;
-  padding: 1.5rem;
   background: border-box;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .home-artificial-reef__textbox hr {
@@ -814,14 +844,14 @@ figcaption {
   border: none;
   display: block;
   opacity: 1;
-  margin: 40px 0;
+  margin: 40px auto;
 }
 
 .home-artificial-reef__textbox::before {
   content: "";
   position: relative;
   background-color: #000;
-  background: url("../images/home/section-banner-02_1920.jpg") no-repeat center center;
+  background: url("../images/home/section-banner-03.jpg") no-repeat center center;
   background-size: cover;
   top: 0;
   right: 0;
@@ -829,13 +859,20 @@ figcaption {
   left: 0;
   opacity: 1;
   width: 100%;
-  height: 330px;
   display: block;
   margin-bottom: 2rem;
+  padding-bottom: 56.25%;
+  height: 0;
 }
 
 .home-artificial-reef__textbox a {
   margin-top: 2rem;
+}
+
+.home-artificial-reef__textbox p {
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media only screen and (max-width: 991px) {
@@ -850,28 +887,16 @@ figcaption {
   }
 }
 
-@media only screen and (min-width: 1024px) {
-  .home-artificial-reef__textbox {
-    position: relative;
-    width: 50%;
-    margin-left: 50%;
-    background: border-box;
-  }
-  .home-artificial-reef__textbox::before {
-    position: absolute;
-    left: -50%;
-    width: 100%;
-    margin-left: -50%;
-    height: 100%;
+@media only screen and (min-width: 992px) {
+  .home-artificial-reef {
+    max-width: 80vw;
+    padding: 1.5vw;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .home-artificial-reef {
-    max-width: 90vw;
-  }
-  .home-artificial-reef__textbox {
-    padding: 80px 60px;
+    max-width: 61.8vw;
   }
 }
 
@@ -898,7 +923,7 @@ figcaption {
 }
 
 .home-projects p {
-  max-width: 80%;
+  max-width: 85%;
   margin: auto;
 }
 
