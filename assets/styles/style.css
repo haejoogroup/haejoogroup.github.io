@@ -286,6 +286,12 @@ b, strong {
 
 @media only screen and (min-width: 1200px) {
   .globalFooter__backTop svg {
+    top: 2px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .globalFooter__backTop svg {
     top: 4px;
   }
 }
